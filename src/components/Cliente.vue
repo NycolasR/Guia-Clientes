@@ -6,17 +6,15 @@
         <p>Número: {{ cliente.numero }}</p>
         <p>E-mail: {{ cliente.email }}</p>
 
-        <!-- Diretiva do Vue.js para condicionar a exibição de um elemento HTML
-        O v-else deve ser usado logo abaixo do v-if-->
-        <p v-if="showAge">
+        <!-- Diretiva do Vue.js para exibir um elemento HTML
+        caso showAge for verdadeira
+        
+        O resultado é o mesmo do v-if, só que tem 2 diferenças:
+            - Mesmo com o v-show falso, o Vue não deleta o elemento;
+            - Não existe else para v-show.
+        -->
+        <p v-show="showAge">
             Idade: {{ cliente.idade }}
-        </p>
-        <p v-else>
-            O cliente escondeu a idade!
-        </p>
-
-        <p v-if="cliente.idade < 18">
-            Este cliente é menor de idade!
         </p>
         
     </div>
