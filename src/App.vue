@@ -3,15 +3,15 @@
     <h1>Guia Clientes</h1>
 
     <Cliente
-        :cliente="clienteNycolas"
+        :cliente="clienteNycolas" :showAge="true"
     />
 
     <Cliente
-        :cliente="clienteNycolas"
+        :cliente="clienteNycolas" :showAge="true"
     />
-    
+
     <Cliente
-        :cliente="clienteNycolas"
+        :cliente="clienteNycolas" :showAge="false"
     />
 
     
@@ -32,7 +32,6 @@ export default {
         numero: "(83)99960-0613",
         email: "nycolas@gmail.com",
         idade: "19",
-        descricao: "Loren ipsum Loren ipsum"
       }
     }
   }
