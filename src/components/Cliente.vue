@@ -1,12 +1,12 @@
 <template>
     <div id="cliente">
-        <h4>Nome: {{ nome }}</h4>
+        <h4>Nome: {{ cliente.nome }}</h4>
         <hr>
-        <p>{{ descricao }}</p>
+        <p>{{ cliente.descricao }}</p>
         <hr>
-        <p>Número: {{ numero }}</p>
-        <p>E-mail: {{ email }}</p>
-        <p>Idade: {{ idade }}</p>
+        <p>Número: {{ cliente.numero }}</p>
+        <p>E-mail: {{ cliente.email }}</p>
+        <p>Idade: {{ cliente.idade }}</p>
     </div>
 </template>
 
@@ -23,18 +23,14 @@ export default {
     }*/
 
     props: {
-        nome: String,
-        numero: String,
-        email: String,
-        idade: Number,
-        descricao: String,
+        cliente: Object,
     }
 }
 </script>
 
 <style scoped>
     #cliente {
-        background-color: #ece5e3;
+        background-color: #ececec;
         font-family: sans-serif;
         max-width: 600px;
         padding: 0.5%;
