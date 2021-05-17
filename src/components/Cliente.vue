@@ -1,5 +1,11 @@
 <template>
-    <div id="cliente">
+    <!--Condicionando a classe da div-->
+    <div
+        :class="{
+            'cliente': !isPremium,
+            'cliente-premium': isPremium
+        }"
+    >
         <hr>
         <h4>Nome: {{ cliente.nome }}</h4>
         <hr>
@@ -22,15 +28,11 @@
 
 <script>
 export default {
-    /*data() {
+    data() {
         return {
-            nome: "Nycolas R. Alves",
-            numero: "(83)99960-0613",
-            email: "nycolasramon3@gmail.com",
-            idade: 19,
-            descricao: "blablablablabla"
+            isPremium: false // valor padrão
         }
-    }*/
+    },
 
     props: {
         cliente: Object,
@@ -40,12 +42,21 @@ export default {
 </script>
 
 <style scoped>
-    #cliente {
+    .cliente {
         background-color: #ececec;
         font-family: sans-serif;
         max-width: 600px;
-        padding: 0.5%;
+        padding: 1%;
         margin-top: 2%;
         /*height: 120px;*/
+    }
+
+    .cliente-premium {
+        background-color: #000000;
+        color: rgb(255, 255, 108);
+        font-family: sans-serif;
+        max-width: 600px;
+        padding: 1%;
+        margin-top: 2%;
     }
 </style>
